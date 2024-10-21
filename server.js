@@ -4,9 +4,9 @@ const todoRoutes = require("./routes/todo/todoRoutes");
 const { connectDB } = require("./config/db_config");
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+const cors = require("cors");
 // DB Connection
-
+app.use(cors());
 connectDB();
 
 // Body-Parser
